@@ -28,11 +28,26 @@ class Clube:
 
     def numero_de_socios(self):
         return len(self.socios)
+
     def mes_associacao (self,mes, ano):
-        print('oi')
+        if mes in self.socios and ano in self.socios:
+            return self.socios.count(mes)
+
+        if mes not in range(1, 12):
+            raise ValueError
+        if ano not in len(4):
+            raise TypeError
+        else:
+            return 0
     def expulsar (self, mes, ano):
         expulsos = []
-        if mes in self.socios and ano in self.socios:
-            print("Cerin pra expulsar")
+        '''if mes in self.socios and ano in self.socios:
+            self.socios.pop()
+            self.socios.append(expulsos)
+            return sorted(expulsos)'''
+        if mes < 1 or mes >12:
+            raise ValueError
+        if ano not in len(4):
+            raise TypeError
         else:
             return expulsos
