@@ -24,30 +24,36 @@ class Clube:
         self.socios = []
 
     def associar(self, socio):
-        self.socios.append(socio)
+        self.socios.append(socio) #Correto
 
     def numero_de_socios(self):
-        return len(self.socios)
+        return len(self.socios) #Correto
 
     def mes_associacao (self,mes, ano):
-        if mes in self.socios and ano in self.socios:
-            return self.socios.count(mes)
+
+        '''Ainda não está contando, apenas quero verificar se ele pega o indice'''
+        for i in range(len(self.socios)):
+            print(self.socios[i][4])
+            print(self.socios[i][5])
 
         if mes not in range(1, 12):
-            raise ValueError
+            raise ValueError #Correto
+
         if ano not in len(4):
-            raise TypeError
+            raise TypeError #Correto
+
         else:
-            return 0
+            return 0 #Correto
+
     def expulsar (self, mes, ano):
-        expulsos = []
-        '''if mes in self.socios and ano in self.socios:
-            self.socios.pop()
-            self.socios.append(expulsos)
-            return sorted(expulsos)'''
-        if mes < 1 or mes >12:
-            raise ValueError
+        expulsos = ()
+        if mes < 1 or mes > 12:
+            raise ValueError #Correto
+
         if ano not in len(4):
-            raise TypeError
+            raise TypeError #Correto
+
+        #Expulsar vai aqui
+
         else:
-            return expulsos
+            return expulsos #Correto
