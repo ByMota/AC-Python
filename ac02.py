@@ -1,7 +1,7 @@
 # ATIVIDADE CONTÍNUA 02
 
 # NOMES DOS ALUNOS (máximo 6 alunos)
-# ALUNO 1: nome
+# ALUNO 1: Vinicius Camargo Mota Morici
 # ALUNO 2: nome
 # ALUNO 3: nome
 # ALUNO 4: nome
