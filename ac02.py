@@ -2,7 +2,7 @@
 
 # NOMES DOS ALUNOS (máximo 6 alunos)
 # ALUNO 1: Vinicius Camargo Mota Morici
-# ALUNO 2: nome
+# ALUNO 2: Vinicius Santos de Souza
 # ALUNO 3: nome
 # ALUNO 4: nome
 # ALUNO 5: nome
