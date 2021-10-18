@@ -28,10 +28,10 @@ class Personagem:
         self.__poderes = []
 
     def adicionar_super_poder(self, superpoder):
-        try:
+        if len(self.__poderes) == 4:
+            raise ValueError
+        else:
             self.__poderes.append(superpoder)
-        except ValueError:
-            pass
 
     def get_poder_total(self):
         sum(self.__poderes)
