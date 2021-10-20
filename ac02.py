@@ -18,51 +18,41 @@ class Socio:
         self.ano = ano
 
 
-
 class Clube:
     def __init__(self):
         self.socios = []
 
     def associar(self, socio):
-        self.socios.append(socio) #Correto
+        self.socios.append(socio)
 
     def numero_de_socios(self):
-        return len(self.socios) #Correto
+        return len(self.socios)
 
-    def mes_associacao (self,mes, ano):
+    def mes_associacao(self, mes, ano):
         associados = 0
-
         for socio in self.socios:
-
             if(socio.mes == mes and socio.ano == ano):
                 associados += 1
-
         if mes not in range(1, 12):
-            raise ValueError #Correto
-        
+            raise ValueError
         if len(str(ano)) != 4:
-            raise TypeError 
-        
-        return associados #Correto
+            raise TypeError
+        return associados
 
+    def expulsar(self, mes, ano):
+        lista = []
+        lista_pop = []
+        if mes < 1 or mes > 12:
+            raise ValueError
 
+        elif len(str(ano)) != 4:
+            raise TypeError
 
-    def expulsar (self, mes, ano):
-            lista = []
-            lista_pop = []
-            if mes < 1 or mes > 12:
-                raise ValueError #Correto
-
-            elif len(str(ano)) != 4:
-                raise TypeError #Correto
-
-            else:
-                for index in  range(len(self.socios)):
-                    if self.socios[index].mes == mes and self.socios[index].ano == ano:
-                        lista_pop.append(self.socios[index])
-                        lista.append(self.socios[index].nome)
-                for x in lista_pop:
-                    self.socios.remove(x)
-        
-            return tuple(sorted((lista))) #Correto
-
+        else:
+            for index in range(len(self.socios)):
+                if self.socios[index].mes == mes and self.socios[index].ano == ano:
+                    lista_pop.append(self.socios[index])
+                    lista.append(self.socios[index].nome)
+            for x in lista_pop:
+                self.socios.remove(x)
+        return tuple(sorted((lista)))
