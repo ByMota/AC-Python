@@ -34,15 +34,15 @@ class Personagem:
             self.__poderes.append(superpoder)
 
     def get_poder_total(self):
-        sum(self.__poderes)
+        soma_poderes = 0
+        for i in self.__poderes:
+            soma_poderes += SuperPoder.get_categoria(i)
+        return soma_poderes
 
 
 class SuperHeroi(Personagem):
-    def __init__(self, nome, nome_vida_real):
-        super().__init__(nome, nome_vida_real)
-
     def get_poder_total(self):
-        heroi = SuperHeroi.get_poder_total() * 1.10
+        heroi = super().get_poder_total() * 1.10
         return heroi
 
 
@@ -54,9 +54,9 @@ class Vilao(Personagem):
 
 class Confronto:
     def lutar(self, heroi, vilao):
-        if SuperHeroi.get_poder_total() >  Vilao.get_poder_total():
+        if heroi.get_poder_total() > vilao.get_poder_total():
             return 1
-        elif Vilao.get_poder_total() > SuperHeroi.get_poder_total():
+        elif vilao.get_poder_total() > heroi.get_poder_total():
             return 2
         else:
-            return 0 
+            return 0
