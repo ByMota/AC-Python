@@ -39,18 +39,18 @@ class Clube:
             raise TypeError
         return associados
 
-    def expulsar(self, mes, ano):
+    def expulsar(self, m, a):
         lista = []
         lista_pop = []
-        if mes < 1 or mes > 12:
+        if m < 1 or m > 12:
             raise ValueError
 
-        elif len(str(ano)) != 4:
+        elif len(str(a)) != 4:
             raise TypeError
 
         else:
             for index in range(len(self.socios)):
-                if self.socios[index].mes == mes and self.socios[index].ano == ano:
+                if self.socios[index].mes == m and self.socios[index].ano == a:
                     lista_pop.append(self.socios[index])
                     lista.append(self.socios[index].nome)
             for x in lista_pop:

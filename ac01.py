@@ -103,8 +103,8 @@ def excluir_nota(alunos, nome):
     return alunos
 
 
-notas_aluno = {'pedro': [5, 7, 8], 'martins': [5, 6, 7]
-                , 'vitor': [3.5, 1.0, 6.5]}
+notas_aluno = {'pedro': [5, 7, 8], 'martins': [
+    5, 6, 7], 'vitor': [3.5, 1.0, 6.5]}
 
 print(excluir_nota(notas_aluno, 'pedro'))
 
@@ -125,6 +125,7 @@ def menor_nota(alunos):
     return menorDic
 
 
-notas_aluno = {'pedro': [5, 7, 8], 'martins': [5, 6, 7], 'vitor': [3.5, 1.0, 6.5]}
+notas_aluno = {'pedro': [5, 7, 8], 'martins': [
+    5, 6, 7], 'vitor': [3.5, 1.0, 6.5]}
 
 print(menor_nota(notas_aluno))
